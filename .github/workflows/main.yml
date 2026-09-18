@@ -12,6 +12,7 @@ jobs:
       run: |
         go mod init vpnapp
         go get fyne.io/fyne/v2
+        go mod tidy
         go build -ldflags="-H windowsgui" -o vpn_multiplayer.exe main.go
     - name: Upload Artifact
       uses: actions/upload-artifact@v4
